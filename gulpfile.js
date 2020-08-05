@@ -14,7 +14,7 @@ const htmlmin = require('gulp-htmlmin');
 gulp.task('server', function () {
     browserSync.init({
         server: {
-            baseDir: "src"
+            baseDir: "docs"
         }
     });
     gulp.watch('src/*.html').on('change', browserSync.reload);
@@ -77,10 +77,15 @@ gulp.task('video', function(){
         .pipe(gulp.dest('docs/video'));
 });
 
+gulp.task('css', function(){
+    return gulp.src('src/css/**/*')
+        .pipe(gulp.dest('docs/css'));
+});
+
 gulp.task('images', function(){
     return gulp.src('src/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('docs/img'));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'scripts', 'icons', 'images', 'video'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'scripts', 'icons', 'images', 'video', 'css'));
