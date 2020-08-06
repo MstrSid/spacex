@@ -14,7 +14,7 @@ const htmlmin = require('gulp-htmlmin');
 gulp.task('server', function () {
     browserSync.init({
         server: {
-            baseDir: "docs"
+            baseDir: "src"
         }
     });
     gulp.watch('src/*.html').on('change', browserSync.reload);

@@ -130,8 +130,140 @@ body {
 
 .rocket {
   position: absolute;
-  top: 350px;
+  top: 100px;
   right: 0;
   z-index: 99;
-  height: 1200px;
+  max-width: 300px;
+}
+
+.footer {
+  padding: 130px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer-link {
+  color: #808080;
+  text-decoration: none;
+}
+
+.footer-nav {
+  margin-top: 40px;
+}
+
+.footer-nav .item-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.footer-text {
+  margin-top: 34px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #808080;
+  margin-bottom: 30px;
+}
+
+.footer .button {
+  min-width: 260px;
+  padding: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  border: 2px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+@media (max-width: 960px) {
+  .rocket {
+    max-width: 230px;
+  }
+  .table-column {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .header .logo {
+    margin-bottom: 20px;
+  }
+  .header .main-nav {
+    margin-bottom: 20px;
+  }
+  .rocket {
+    max-width: 180px;
+  }
+  .video {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .rocket {
+    position: static;
+    margin-bottom: 30px;
+    margin-left: 25%;
+  }
+  .table {
+    margin-bottom: 0;
+  }
+  .table-column {
+    font-size: 14px;
+    width: 150px;
+  }
+  .video {
+    width: 100%;
+  }
+  .footer-nav .list {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .footer-nav .item {
+    margin-bottom: 15px;
+  }
+  .footer-text {
+    text-align: center;
+  }
+  .main {
+    padding-top: 50px;
+  }
+  .features {
+    padding-bottom: 0;
+  }
 }
