@@ -246,6 +246,7 @@ body {
   }
   .video {
     width: 100%;
+    height: 300px;
   }
   .footer-nav .list {
     -ms-flex-wrap: wrap;
